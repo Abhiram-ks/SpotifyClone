@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.css">
+  <link id="logo" rel="icon" href="https://th.bing.com/th/id/R.c2a12cba057711495849088844f950cc?rik=982VbYW4HE09lQ&riu=http%3a%2f%2f1000logos.net%2fwp-content%2fuploads%2f2017%2f08%2fSpotify-Logo.png&ehk=Gcl8lyv0FdI4gDVyKLmVCVfNf8yc1xDmAvEDyPzt8Bk%3d&risl=&pid=ImgRaw&r=0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Spotify - Web Player: abhiram</title>
+</head>
+<body>
+  <div class="sidebar">
+    <!--sidebar_box1-->
+    <div class="sidebar-nav">
+        <div class="main-logo">
+           <a href=""></a><img src="spotify-image/spotify.jpg"></a>
+        </div>
+        <ul>
+            <li><a href="">
+                <span id="home-icon"><i class="fa-solid fa-house"></i></span>
+                <span id="home-name">Home</span>
+            </a></li>
+            <li><a href="">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                <span id="search-name">Search</span>
+            </a></li>
+        </ul>
+    </div>
+   <!--sidebar_box2-->
+    <div class="sidebar-nav">
+        <ul>
+            <li><a href="">
+                <span><i class="fa-solid fa-book"></i></span>
+                <span class="library">Your  Library</span> 
+                <span class="library-plus">
+                    <i class="fa-light fa-plus"></i></span>  
+            </a></li>
+            <li>
+                <!--scroll_box-->
+              <div class="sidebar-scroll">
+                <div class="create-playlist">
+                    <h4>Create your first playlist</h4>
+                    <p>It's easy, we'll help you</p>
+                    <button>Create playlist </button>
+                </div>
+                    <div class="create-playlist">
+                        <h4>Let's find some podcasts to follow</h4>
+                        <p>We'll keep you updated on new episodes</p>
+                        <button>Browse podcasts</button>
+                    </div>
+              </div>
+            </li>
+        </ul>
+        <div class="privacy">
+            <ul>
+                <li>
+                    <a href="">legal</a>
+                    <a href="">Sefety & privacyCenter</a>
+                    <a href="">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="">Cookies</a>
+                    <a href="">About Ads</a>
+                    <a href="">Accessibility</a>
+                </li>
+                <li>
+                    <a id="last-one" href="">Cookies</a>
+                </li>
+            </ul>
+        </div>
+        <div class="language-button">
+            <button><i class="fa-solid fa-globe"></i> English</button>
+        </div>
+       </div>
+      </div>
+    <!--login section-->
+    <div class="main-section">
+        <div class="top-section">
+            <div class="right-section">
+                <button><i class="fa-solid fa-chevron-left"></i></button>
+                <button><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="login-btn">
+                <button class="sign-up">Sign up</button>
+                <button class="log-in">Log in</button>
+            </div>
+        </div>
+        <!--plary list section-->
+        <div class="spotify-playlist">
+            <h2>Popular artists</h2>
+              <div class="card">
+                 <!---card 1 row 1-->
+                <div class="item">
+                    <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdBYK5fBv4Dl3wnBiXd-LikTjaR4stnTePAQ5A7lM5Yrn2n1fWhaq1cx_1PcFq68zRzdY&usqp=CAU" alt="image">
+                    <div class="play-button">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Billie Eillish</h4>
+                   <p>Artist</p>
+                </div>
+                 <!---card 2 row 1-->
+                <div class="item">
+                    <img   src="data:image/jpeg;base64,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" alt="image">
+                    <div class="play-button">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>24kGoldn</h4>
+                   <p>Artist</p>
+                </div>
+                <!---card 3 row 1-->
+                <div class="item">
+                    <img src="spotify-image/artist-3.jpeg" alt="">
+                    <div class="play-button">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>ZAIN</h4>
+                   <p>Artist</p>
+                </div>
+                 <!---card 4 row 1-->
+                <div class="item">
+                    <img  src="spotify-image/artist-4.jpeg" alt="">
+                    <div class="play-button">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Lil Nas X</h4>
+                   <p>Artist</p>
+                </div>
+                 <!---card 5 row 1-->
+                <div class="item">
+                    <img src="spotify-image/artist-5.jpg" alt="">
+                    <div class="play-button">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Lil Mosay</h4>
+                   <p>Artist</p>
+                </div>
+                <!---card 6 row 1-->
+                <div class="item">
+                    <img src="spotify-image/artist-6" alt="">
+                    <div class="play-button">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Ariana Grande</h4>
+                   <p>Artist</p>
+                </div>
+            </div>
+        </div>
+
+        <!--plary list section2-->
+        <div class="spotify-playlist2">
+            <h2>Popular albums</h2>
+              <div class="card2">
+                 <!---card 1 row 2-->
+                <div class="item2">
+                    <img  src="spotify-image/row-2song.jpeg" alt="">
+                    <div class="play-button2">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Come Around</h4>
+                   <p>Hoodie Allen, Christian franch</p>
+                </div>
+                 <!---card 2 row 2-->
+                <div class="item2">
+                    <img   src="spotify-image/row-2song2.jpeg" alt="">
+                    <div class="play-button2">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Summertime Sadne ss</h4>
+                   <p>Lane Del Ray</p>
+                </div>
+                <!---card 3 row 1-->
+                <div class="item2">
+                    <img src="spotify-image/row-2song3.jpeg" alt="">
+                    <div class="play-button2">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Fetish (feat.Gucci)</h4>
+                   <p>Selena Gomez, Gucci Mane</p>
+                </div>
+                 <!---card 4 row 1-->
+                <div class="item2">
+                    <img  src="spotify-image/row-2song4.jpeg" alt="">
+                    <div class="play-button2">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Waterfall</h4>
+                   <p>Michael Schulte x R3H AB</p>
+                </div>
+                 <!---card 5 row 1-->
+                <div class="item2">
+                    <img src="spotify-image/row-2song5.jpeg" alt="">
+                    <div class="play-button2">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>greedy</h4>
+                   <p>Tate McRae</p>
+                </div>
+                <!---card 6 row 1-->
+                <div class="item2">
+                    <img src="spotify-image/row-2song6.jpeg" alt="">
+                    <div class="play-button2">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Late Night Talking</h4>
+                   <p>Harry Styles Wiki</p>
+                </div>
+            </div>
+        </div>
+         <!--plary list section3-->
+         <div class="spotify-playlist2">
+            <h2>Spotify Playlist</h2>
+              <div class="card2">
+                 <!---card 1 row 3-->
+                <div class="item2">
+                    <img  src="spotify-image/row3-1.jpeg" alt="">
+                    <div class="play-button2">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Chill Hits</h4>
+                   <p>Kick back to the best new and recent chill ..</p>
+                </div>
+                 <!---card 2 row 3-->
+                <div class="item2">
+                    <img   src="spotify-image/row3-2.jpeg" alt="">
+                    <div class="play-button2">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Jazz in the Backgr..</h4>
+                   <p>Soft Instrumental Jazz for all your activities</p>
+                </div>
+                <!---card 3 row 3-->
+                <div class="item2">
+                    <img src="spotify-image/row3-3.jpeg" alt="">
+                    <div class="play-button2">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Bonga Flava</h4>
+                   <p>Get your fill of vibes st eaight out of Tanzani..</p>
+                </div>
+                 <!---card 4 row 3-->
+                <div class="item2">
+                    <img  src="spotify-image/row-3-4.jpeg" alt="">
+                    <div class="play-button2">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Hip-Life Hits</h4>
+                   <p>The big Hip-Life rn.... &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cover:Fameya</p>
+                </div>
+                 <!---card 5 row 3-->
+                <div class="item2">
+                    <img src="spotify-image/row-3-5.jpeg" alt="">
+                    <div class="play-button2">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Bigger Picture</h4>
+                   <p>Victoria Kimani- Some of the most influential..</p>
+                </div>
+                <!---card 6 row 1-->
+                <div class="item2">
+                    <img src="spotify-image/last-one.jpeg" alt="">
+                    <div class="play-button2">
+                      <span><i class="fa-solid fa-play"></i></span>
+                   </div>
+                   <h4>Daily Lift</h4>
+                   <p>Get in the zone with t hese current james</p>
+                </div>
+            </div>
+        </div>
+               <!--plary list section4-->
+               <div class="spotify-playlist2">
+                    <h2>Old is Gold - Recommended For You</h2>
+                      <div class="card2">
+                         <!---card 1 row 4-->
+                        <div class="item2">
+                            <img  src="spotify-image/song1.jpeg" alt="">
+                            <div class="play-button2">
+                              <span><i class="fa-solid fa-play"></i></span>
+                           </div>
+                           <h4>All Too Well</h4>
+                           <p>Taylor Switf <br> For those moody days</p>
+                        </div>
+                         <!---card 2 row 4-->
+                        <div class="item2">
+                            <img   src="spotify-image/song2.jpeg" alt="">
+                            <div class="play-button2">
+                              <span><i class="fa-solid fa-play"></i></span>
+                           </div>
+                           <h4>DzaNum</h4>
+                           <p>Teya Dora <br> If i give you my time</p>
+                        </div>
+                        <!---card 3 row 3-->
+                        <div class="item2">
+                            <img src="spotify-image/song23.jpeg" alt="">
+                            <div class="play-button2">
+                              <span><i class="fa-solid fa-play"></i></span>
+                           </div>
+                           <h4>Atlantis</h4>
+                           <p>Seafret <br> Tell me why this end</p>
+                        </div>
+                         <!---card 4 row 3-->
+                        <div class="item2">
+                            <img  src="spotify-image/song4.jpeg" alt="">
+                            <div class="play-button2">
+                              <span><i class="fa-solid fa-play"></i></span>
+                           </div>
+                           <h4>My Heart Will GO On</h4>
+                           <p>Celline Dion, Horner <br>Promise me you'll sur vive.</p>
+                        </div>
+                         <!---card 5 row 3-->
+                        <div class="item2">
+                            <img src="spotify-image/song5.jpeg" alt="">
+                            <div class="play-button2">
+                              <span><i class="fa-solid fa-play"></i></span>
+                           </div>
+                           <h4>I WANNE BE YOUR SLAVE</h4>
+                           <p>Maneskin<br> don't live when you..</p>
+                        </div>
+                        <!---card 6 row 1-->
+                        <div class="item2">
+                            <img src="spotify-image/lastimage.jpeg" alt="">
+                            <div class="play-button2">
+                              <span><i class="fa-solid fa-play"></i></span>
+                           </div>
+                           <h4>Summer In The City </h4>
+                           <p>Xuitcasecity</p>
+                        </div>
+                    </div>
+                </div>
+                 <!--plary list section4-->
+                 <div class="spotify-playlist2">
+                    <h2>Best of artists</h2>
+                      <div class="card2">
+                         <!---card 1 row 4-->
+                        <div class="item2">
+                            <img  src="spotify-image/radio1" alt="">
+                            <div class="play-button2">
+                              <span><i class="fa-solid fa-play"></i></span>
+                           </div>
+                           <h4>This Is ZAYN</h4>
+                           <p>The essential Style. T he tracks,all in one pl..</p>
+                        </div>
+                         <!---card 2 row 4-->
+                        <div class="item2">
+                            <img   src="spotify-image/radio2.jpeg" alt="">
+                            <div class="play-button2">
+                              <span><i class="fa-solid fa-play"></i></span>
+                           </div>
+                           <h4>This Is Ariana Gran.</h4>
+                           <p>The essential tracks, all in one playlist.</p>
+                        </div>
+                        <!---card 3 row 3-->
+                        <div class="item2">
+                            <img src="spotify-image/radio3.jpeg" alt="">
+                            <div class="play-button2">
+                              <span><i class="fa-solid fa-play"></i></span>
+                           </div>
+                           <h4>This Is Taylor Swift</h4>
+                           <p>The essential tracks, all in one playlist</p>
+                        </div>
+                         <!---card 4 row 3-->
+                        <div class="item2">
+                            <img  src="spotify-image/radio4.jpeg" alt="">
+                            <div class="play-button2">
+                              <span><i class="fa-solid fa-play"></i></span>
+                           </div>
+                           <h4>This Is Lil Baby</h4>
+                           <p>In memoriam to lil ba by. His creative work.</p>
+                        </div>
+                         <!---card 5 row 3-->
+                        <div class="item2">
+                            <img src="spotify-image/radio5.jpeg" alt="">
+                            <div class="play-button2">
+                              <span><i class="fa-solid fa-play"></i></span>
+                           </div>
+                           <h4>This Is Lil Dunk</h4>
+                           <p>The essential tracks from The Lil Dunk</p>
+                        </div>
+                        <!---card 6 row 1-->
+                        <div class="item2">
+                            <img src="spotify-image/radio6.jpeg" alt="">
+                            <div class="play-button2">
+                              <span><i class="fa-solid fa-play"></i></span>
+                           </div>
+                           <h4>This Is Beyonce</h4>
+                           <p>Queen Bey's most ess ential tracks, all in on..</p>
+                        </div>
+                    </div>
+                </div>
+      <div class="footer-section">
+        <div class="footer">
+          <div class="footer-links">
+            <div class="footer-column">
+              <div>Company</div>
+              <ul class="col-link">
+                <li><a href="">About</a></li>
+                <li><a href="">Jobs</a></li>
+                <li><a href="">For the Record</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <div>Community</div>
+              <ul class="col-link">
+                <li><a href="">For Artists</a></li>
+                <li><a href="">Developers</a></li>
+                <li><a href="">Advertising</a></li>
+                <li><a href="">Investors</a></li>
+                <li><a href="">Vendors</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <div>Useful Links</div>
+              <ul class="col-link">
+                <li><a href="">Support</a></li>
+                <li><a href="">free Mobile App</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <div>Spotify Plans</div>
+              <ul class="col-link">
+                <li><a href="">Premium individual</a></li>
+                <li><a href="">Premium Due</a></li>
+                <li><a href="">Primium Family</a></li>
+                <li><a href="">Premium Student</a></li>
+                <li><a href="">Spotify Free</a></li>
+              </ul>
+            </div>
+          </div>
+
+         <div class="social-links">
+          <div>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i> 
+          </div>
+         </div>
+        </div>
+      </div>
+  <hr>
+    <div>
+       <p class="copy-right">&copy; 2024 Spotify AB</p>
+    </div>
+
+</div>
+    <div class="preview">
+      <div class="text">
+        <h4>Preview of Spotify</h4>
+        <p>Sign up to get unlimited songs and podcasts With occasional ads. No credit card needed.</p>
+    </div>
+    <div class="button">
+      <button>Sing up free</button>
+    </div>
+  </div>
+   
+</body>
+</htm

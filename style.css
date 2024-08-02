@@ -1,0 +1,156 @@
+#logo{
+	width: 550px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.sidebar{
+  width: 340px;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+}
+.sidebar-nav{
+	background-color: #111111;
+	border-radius: 10px;
+	padding: 20px 10px;
+	margin-bottom: 10px;
+}
+
+.sidebar-nav .main-logo{
+	width: 100px;
+	
+}
+.sidebar-nav .main-logo img{
+	width: 100%;
+	cursor: pointer;
+}
+.sidebar-nav ul{
+	list-style: none;
+}
+.sidebar-nav ul li{
+	padding: 10px 11px;
+}
+.sidebar-nav ul li a{
+	text-decoration: none;
+	color: #b3b3b3;
+	font-size: 16px;
+	font-weight: bold;
+}
+#home-icon, #home-name{
+	color: white;
+}
+.sidebar-nav ul li a:hover{
+	color: #fff;
+}
+#home-name:hover, #search-name:hover{
+	text-decoration: underline;
+}
+.sidebar-nav ul li a i{
+	font-size: 21px;
+	margin-right: 10.8px;
+}
+.library-plus{
+	font-size: 21px;
+	float: right;
+}
+.library-plus:hover{
+	border-radius: 20px;
+	background-color: rgb(98, 98, 98);
+	align-items: center;
+	justify-items: center;
+}
+.library{
+	text-align: center;
+	border-radius: 50%;
+	padding: 5px;
+	font-size: 15px;
+}
+
+.create-playlist
+{
+	background-color: #2f2f2f;
+	padding: 20px 10px;
+	border-radius: 10px;
+	margin-bottom: 16px;
+}
+.sidebar-scroll{
+	height: 150px;
+	overflow-y:auto;
+}
+.sidebar-scroll::-webkit-scrollbar{
+	background: transparent;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+	background: transparent;
+	width: 5px;
+}
+.sidebar-scroll:hover::-webkit-scrollbar-thumb {
+	background: rgb(89, 89, 89);
+	width: 1px;
+	height: 40px;
+}
+.create-playlist h4{
+	color: rgb(246, 246, 246);
+	font-size: 15px;
+	margin-bottom: 7px;
+	cursor: default;
+}
+.create-playlist p{
+	color: rgb(189, 189, 189);
+	font-size: 13px;
+	margin-bottom: 19px;
+	cursor: default;
+}
+.create-playlist button{
+	padding: 7px 19px;
+	border-radius: 19px;
+	border: 0;
+	outline: 0;
+	font-weight: bold;
+	margin-left: 8px;
+	cursor: pointer;
+}
+.create-playlist button:hover{
+	font-size: 15.1px;
+	height: 31px;
+}
+.privacy ul li a{
+	text-decoration: none;
+	color:#999999 ;
+	font-size: 12px;
+	font-weight: 500;
+	margin: 0px 5px;
+}
+.privacy ul{
+	list-style: none;
+	margin-top: 26px;
+}
+#last-one:hover{
+	text-decoration: underline;
+}
+.language-button{
+	padding: 20px 30px;
+}
+.language-button button{
+	padding: 6px 15px;
+	border-radius: 20px;
+	background: transparent;
+	border: 0;
+	outline: none;
+	color: white;
+	border: 1px solid;
+	cursor: pointer;
+}
+.language-button button:hover{
+	border: 2px solid;
+}
